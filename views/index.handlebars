@@ -1,0 +1,52 @@
+<div class="container">	
+	<div class="jumbotron"> 
+	<img src='assets/images/burger.png' width="200" height="200">
+<h1>Eat the Hamburger!</h1>
+	</div>
+{{!-- section for burger menu --}}
+<div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+<h2>Hamburgers ready to eat!</h2>
+
+<ul>
+  {{#each burgers}}
+        {{#unless devoured}}
+  	<li>
+  	   <p>{{this.id}} {{this.burger_name}} <button type="submit" data-id="{{this.id}}" class="btn btn-warning btn-xs" id="devour">Eat me!</button></p>
+  	</li>
+
+        {{/unless}}
+  {{/each}}
+</ul>
+
+    </div>
+  
+{{!-- section for eaten burgers --}}
+ 
+      <div class="col-sm-6">
+        <div class='eatenBurger'>
+<h2>Hamburgers already eaten!</h2>
+
+<ul>
+  {{#each burgers}}
+        {{#if devoured}}
+  	<li>
+  	   <p>{{this.id}} {{this.burger_name}}</p>
+  	</li>
+        {{/if}}
+  {{/each}}
+</ul>
+        </div>
+    </div>
+ 
+
+<div class="col-md-10 col-md-offset-1" id="addburgersection">
+<h2>Add a Burger</h2>
+<form id="addburger" class="button-size">
+	<textarea type="text" name="burger_name"></textarea>
+	<button type="submit">Make Burger!</button>
+</form>
+</div>
+
+

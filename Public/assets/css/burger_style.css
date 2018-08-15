@@ -1,0 +1,19 @@
+.eatenBurger {
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+  
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #ffd1c9;
+}
+
+.jumbotron {
+    text-align: center;
+    font-size: 20px
+}
+
+#addburgersection {
+    align-content: center
+}
