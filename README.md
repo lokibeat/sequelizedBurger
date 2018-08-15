@@ -1,0 +1,2 @@
+# sequelizedBurger
+EatDaBurger with sequelized
